@@ -27,7 +27,7 @@ VALUES
 -- Explore the table:
 
 SELECT *
-FROM myownschema.numbers;
+FROM myownschema.numbers
 
 -- Q1: Write a SQL query to find only the numbers that start a sequence of at least three consecutive numbers in the table. 
 -- Form the additional two columns to illustrate the sequence of at least three consecutive numbers. Do not include numbers that can't form three consecutive numbers.
@@ -42,6 +42,13 @@ col1 col2 col3
 
 -- Answer
 
+ALTER TABLE myownschema.numbers ADD index2 INT;
+ALTER TABLE myownschema.numbers ADD index3 INT;
+
+IF
+SELECT index, index2, index3
+FROM myownschema.numbers
+GROUP BY index, index2, index3;
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Run these once!
@@ -61,8 +68,13 @@ FROM myownschema.stars;
 
 -- Q2: Form a triangle that has three rows, 3 stars at the top row and 1 star at the bottom row and rectangle with 3 rows and 2 columns using this table only.
 
--- Rectangle Answer:
+-- Rectangle Answer: 
 
+ALTER TABLE myownschema.stars ADD star2 VARCHAR(1);
+UPDATE myownschema.stars SET star2 = '*';
+
+SELECT *
+FROM myownschema.stars
 
 -- Triangle Answer: 
 
