@@ -10,7 +10,11 @@ AdventureWorks-for-Postgres/
 DAC-006_Machine_Learning/datasets/*.csv
 .venv/
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> upstream/main
 =======
 DAC-007_Web_Scraping/*Master*
+>>>>>>> upstream/main
+=======
+DAC-008_Intro_To_NLP/datasets/*.csv
 >>>>>>> upstream/main
